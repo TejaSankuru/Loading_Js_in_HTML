@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript">
+            function loadPage(href)
+            {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", href, false);
+                xmlhttp.send();
+                return xmlhttp.responseText;
+            }
+
+           
+        </script>
+    </head>
+
+    <body>
+        <button onClick="document.getElementById('bottom').innerHTML = 
+                      loadPage('index1.html');">Home</button>
+
+        <div id="bottom"></div>
+
+
+    </body>
+
+</html>
