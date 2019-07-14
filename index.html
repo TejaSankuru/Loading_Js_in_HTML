@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <script type="text/javascript">
-            function loadPage(href)
-            {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", href, false);
-                xmlhttp.send();
-                return xmlhttp.responseText;
-            }
+<html>
 
-           
-        </script>
-    </head>
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
 
-    <body>
-        <button onClick="document.getElementById('bottom').innerHTML = 
-                      loadPage('index1.html');">Home</button>
+</head>
 
-        <div id="bottom"></div>
+<body>
+	<div id="content">Test</div>
+	<button type="button" id="myButton">Load</button>
+    	<script>
+		function load_home() {
+  		document.getElementById("content").innerHTML =
+    	'<object type="text/html" data="index1.html" ></object>';
+		}
+		document.getElementById("myButton").addEventListener ("click",load_home);
 
-
-    </body>
+	</script>
+</body>
 
 </html>
