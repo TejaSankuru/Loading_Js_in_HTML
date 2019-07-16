@@ -143,21 +143,21 @@
          color: Blue;
          text-align: center;
          }
-         
-         @media screen and (device-width: 360px)  {
-         #txt-animation {
+         @media screen and (min-width: 980px) /* Desktop */ {
+         #txt-animation { 
          height: 22%;
          }
-/*          .text-copy,
-         .text-copy:nth-child(1) ,
-         .text-copy:nth-child(2) ,
-         .text-copy:nth-child(3) ,
-         .text-copy:nth-child(4) ,
-         .text-copy:nth-child(5) {
-         stroke: Black !important;
-         } */
-       
-         } 
+         }
+         @media screen  and (max-width: 979px) /* Tablet */ {
+         #txt-animation { 
+         height: 22%;
+         }
+         }
+         @media screen and (max-width: 500px) /* Mobile */ {
+         #txt-animation { 
+         height: 22%;
+         }
+         }
          @media only screen and (max-height: 700px) {
          h2 {
          font-size: 1.5em;
