@@ -6,177 +6,177 @@
 	<meta charset="UTF-8" />
 	<!-- <meta http-equiv="x-ua-compatible" content="IE=edge"> -->
 <style>
-	canvas {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      font-family: Helvetica;
-      user-select: none;
-	    position:absolute;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: #444444;
-      display: flex;
-      overflow: hidden;
-      /*position: absolute; */
-      /* top: 0;
-      bottom: 0; */
-      /* min-height: 100%;
-      margin: auto; */
-      height: 100vh;
-    }
-    
-     h2,
-    h3 {
-      font-weight: 400;
-    }
-    h2 {
-      font-size: 2em;
-    }
-    h3 {
-      font-size: 1.3em;
-    }
-    canvas {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 90vh;
-    }
-    path {
-      opacity: 50%;
-    }
-    .content {
-      text-align: center;
-      margin: 40px 20px;
-    }
-    .colors {
-      z-index: 2;
-      margin: 0 40px;
-      text-align: center;
-    }
-    .color {
-      height: 50px;
-      width: 50px;
-      margin-right: 10px;
-      border-radius: 50%;
-      border: none;
-    }
-    .color:hover {
-      opacity: .7;
-    }
-    .color:focus {
-      outline: 0;
-    }
-    .rainbow-logo {
-      border-radius: 50%;
-      max-width: 24%;
-      max-height: 221px;
-    }
-    .signature {
-      margin-top: 40px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    @media screen and (max-width: 480px) {
-       body{
-         overflow:hiden;
-       }
-	}
-      
-    @media only screen and (max-height: 700px) {
-      h2 {
-        font-size: 1.5em;
-      }
-      h3 {
-        font-size: 1.0em;
-      }
-      .color {
-        height: 30px;
-        width: 30px;
-      }
-      .signature {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      .content {
-        margin-bottom: 10px;
-      }
-    }
-    
-  #text {
-	 background: #082330;
-	 background-size: 0.12em 100%;
-	 font: 6em/1 Arial;
+canvas {
+height: 100%;
+width: 100%;
+margin: 0;
+font-family: Helvetica;
+user-select: none;
+    position:absolute;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: #444444;
+display: flex;
+overflow: hidden;
+/*position: absolute; */
+/* top: 0;
+bottom: 0; */
+/* min-height: 100%;
+margin: auto; */
+height: 100vh;
+}
+
+h2,
+h3 {
+font-weight: 400;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.3em;
+}
+canvas {
+position: absolute;
+top: 0;
+width: 100%;
+height: 90vh;
+}
+path {
+opacity: 50%;
+}
+.content {
+text-align: center;
+margin: 40px 20px;
+}
+.colors {
+z-index: 2;
+margin: 0 40px;
+text-align: center;
+}
+.color {
+height: 50px;
+width: 50px;
+margin-right: 10px;
+border-radius: 50%;
+border: none;
+}
+.color:hover {
+opacity: .7;
+}
+.color:focus {
+outline: 0;
+}
+.rainbow-logo {
+border-radius: 50%;
+max-width: 24%;
+max-height: 221px;
+}
+.signature {
+margin-top: 40px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+@media screen and (max-width: 480px) {
+body{
+ overflow:hidden;
+}
+}
+
+@media only screen and (max-height: 700px) {
+h2 {
+font-size: 1.5em;
+}
+h3 {
+font-size: 1.0em;
+}
+.color {
+height: 30px;
+width: 30px;
+}
+.signature {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.content {
+margin-bottom: 10px;
+}
+}
+
+#text {
+ background: #082330;
+ background-size: 0.12em 100%;
+ font: 6em/1 Arial;
 } 
- .text--line {
-	 font-size: 0.5em;
+.text--line {
+ font-size: 0.5em;
 }
- #txt-animation {
-	 position: absolute;
-	 width: 103%;
-	 height: 75%;
+#txt-animation {
+ position: absolute;
+ width: 103%;
+ height: 75%;
 }
- .text-copy {
-	 fill: none;
-	 stroke: white;
-	 stroke-dasharray: 7% 28%;
-	 stroke-width: 3px;
-	 animation: stroke-offset 4s infinite linear;
-   font-weight: 3000;
+.text-copy {
+ fill: none;
+ stroke: white;
+ stroke-dasharray: 7% 28%;
+ stroke-width: 3px;
+ animation: stroke-offset 4s infinite linear;
+font-weight: 3000;
 }
- .text-copy:nth-child(1) {
-	 stroke: white;
-	 stroke-dashoffset: 7%;
+.text-copy:nth-child(1) {
+ stroke: white;
+ stroke-dashoffset: 7%;
 }
- .text-copy:nth-child(2) {
-	 stroke: White;
-	 stroke-dashoffset: 14%;
+.text-copy:nth-child(2) {
+ stroke: White;
+ stroke-dashoffset: 14%;
 }
- .text-copy:nth-child(3) {
-	 stroke: white;
-	 stroke-dashoffset: 21%;
+.text-copy:nth-child(3) {
+ stroke: white;
+ stroke-dashoffset: 21%;
 }
- .text-copy:nth-child(4) {
-	 stroke: white;
-	 stroke-dashoffset: 28%;
+.text-copy:nth-child(4) {
+ stroke: white;
+ stroke-dashoffset: 28%;
 }
- .text-copy:nth-child(5) {
-	 stroke: White;
-	 stroke-dashoffset: 35%;
+.text-copy:nth-child(5) {
+ stroke: White;
+ stroke-dashoffset: 35%;
 }
- @keyframes stroke-offset {
-	 50% {
-		 stroke-dashoffset: 20%;
-		 stroke-dasharray: 0 55%;
-	}
+@keyframes stroke-offset {
+ 50% {
+	 stroke-dashoffset: 20%;
+	 stroke-dasharray: 0 55%;
+}
 }
 #index1{
-	display: none;
-	width:100%;
-	height:90vh;
-	position: relative;
+display: none;
+width:100%;
+height:90vh;
+position: relative;
 }
 #myButton{
-	z-index:1;
+z-index:1;
 }
 .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: cornflowerblue;
-   color: white;
-   text-align: center;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: cornflowerblue;
+color: white;
+text-align: center;
 }
-	body{
-         overflow:hiden;
-       }
- 
+body{
+overflow:hidden;
+}
+
 </style>
 </head>
 
