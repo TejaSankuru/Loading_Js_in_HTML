@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Parcel Sandbox</title>
+	<title>You are not connected to the Internet</title>
 	<meta charset="UTF-8" />
 	<!-- <meta http-equiv="x-ua-compatible" content="IE=edge"> -->
 <style>
@@ -21,13 +21,13 @@
       flex-direction: column;
       color: #444444;
       display: flex;
-      /* overflow: hidden;
-      position: absolute; */
+      overflow: hidden;
+      /*position: absolute; */
       /* top: 0;
       bottom: 0; */
       /* min-height: 100%;
       margin: auto; */
-      height: 85vh;
+      height: 100vh;
     }
     
      h2,
@@ -73,8 +73,8 @@
     }
     .rainbow-logo {
       border-radius: 50%;
-      max-width: 26%;
-      max-height: 358px;
+      max-width: 24%;
+      max-height: 221px;
     }
     .signature {
       margin-top: 40px;
@@ -126,26 +126,27 @@
 	 stroke: white;
 	 stroke-dasharray: 7% 28%;
 	 stroke-width: 3px;
-	 animation: stroke-offset 3s infinite linear;
+	 animation: stroke-offset 4s infinite linear;
+   font-weight: 3000;
 }
  .text-copy:nth-child(1) {
-	 stroke: RED;
+	 stroke: white;
 	 stroke-dashoffset: 7%;
 }
  .text-copy:nth-child(2) {
-	 stroke: BLUE;
+	 stroke: White;
 	 stroke-dashoffset: 14%;
 }
  .text-copy:nth-child(3) {
-	 stroke: green;
+	 stroke: white;
 	 stroke-dashoffset: 21%;
 }
  .text-copy:nth-child(4) {
-	 stroke: BLACK;
+	 stroke: white;
 	 stroke-dashoffset: 28%;
 }
  .text-copy:nth-child(5) {
-	 stroke: #1b8798;
+	 stroke: White;
 	 stroke-dashoffset: 35%;
 }
  @keyframes stroke-offset {
@@ -157,18 +158,27 @@
 #index1{
 	display: none;
 	width:100%;
-	height:100;
+	height:90vh;
 	position: relative;
 }
 #myButton{
 	z-index:1;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: cornflowerblue;
+   color: white;
+   text-align: center;
 }
  
 </style>
 </head>
 
 <body>
-	<div id="content">Test</div>
+	<div id="content"></div>
 	<button type="button" id="myButton">Load</button>
 	
 	<div id="index1">
@@ -243,7 +253,7 @@
 		<h2> So, there's good news and bad news</h2>
 		<h3>Bad news: It looks like you're offline</h3>
 		<h3>Good news: You can draw a picture anywhere on this page while you wait to get it back!</h3>
-		<h4>(pick a color below && start drawing!)</h4>
+		<h4>(pick a color && start drawing!)</h4>
 	  </div>
 	  <div class="colors" style="transform: rotate(90deg); position: absolute; top:160px; left:-69px">
 	  </div>
@@ -257,10 +267,17 @@
 				id="Path-3"></path>
 			</g>
 		  </g>
-		</g>
+    </g>
+    
 	  </svg>
-	
-	</div>
+    
+  </div>
+  <div class="footer">
+    <!-- <p>Footer</p> -->
+    <div>Credits: <a href="https://dev.to/">https://dev.to/</a></div>
+  </div>
+  
+  
     	<script>
 		function load_home() {
   		// document.getElementById("content").innerHTML =
@@ -355,7 +372,9 @@
     canvas.addEventListener('touchmove', endPaint)   
 
 
-	</script>
+  </script>
+  
+  
 </body>
 
 </html>
